@@ -1,15 +1,21 @@
 // Author: Frederick Coleman - January 2018
 let userPlay = document.getElementById("user-play");
+
 let compPlay = document.getElementById("computer-play");
+
 let roundResult = document.getElementById("game-result");
+
 let userScore = document.getElementById("user-score");
+
 let compScore = document.getElementById("computer-score");
 
 let buttons = document.querySelectorAll('INPUT');
 
 function computer_play() {
 	let options = ['rock', 'paper', 'scissors'];
+
 	let randomNum = Math.floor(Math.random() * 4);
+
 	return options[randomNum];
 };
 
@@ -21,8 +27,47 @@ function round(user_str) {
 	};
 
 	userPlay.innerHTML = "You chose "+user_str+".";
+
 	let comp_str = computer_play();
+
 	compPlay.innerHTML = "The computer chose "+comp_str+".";
+
+	switch (user_str) {
+		case 'rock':
+			if (comp_str == 'scissors'){
+				return "You Win! Rock beats Scissors."
+			}
+			else if (comp_str == 'paper') {
+				return "You Lose! Paper beats Rock."
+			}
+			else {
+				return "Its a draw."
+			};
+			break;
+
+		case 'paper':
+			if (comp_str == 'scissors'){
+				return "You Lose! Scissors beat Paper."
+			}
+			else if (comp_str == 'paper') {
+				return "Its a draw."
+			}
+			else {
+				return "You Win! Paper beats Rock."
+			};
+			break;
+
+		case 'scissors':
+			if (comp_str == 'scissors'){
+				return "Its a draw."
+			}
+			else if (comp_str == 'paper') {
+				return "You Win! Scissors beat Paper."
+			}
+			else {
+				return "You Lose! Rock beats Scissors."
+			};
+	}
 }
 
 let computer_score = 0;
