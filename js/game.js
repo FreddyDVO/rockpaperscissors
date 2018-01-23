@@ -1,20 +1,20 @@
 // Author: Frederick Coleman - January 2018
-let userPlay = document.getElementById("user-play");
+var userPlay = document.getElementById("user-play");
 
-let compPlay = document.getElementById("computer-play");
+var compPlay = document.getElementById("computer-play");
 
-let roundResult = document.getElementById("game-result");
+var roundResult = document.getElementById("game-result");
 
-let userScore = document.getElementById("user-score");
+var userScore = document.getElementById("user-score");
 
-let compScore = document.getElementById("computer-score");
+var compScore = document.getElementById("computer-score");
 
-let buttons = document.querySelectorAll('INPUT');
+var buttons = document.querySelectorAll('INPUT');
 
 function computer_play() {
-	let options = ['rock', 'paper', 'scissors'];
+	var options = ['rock', 'paper', 'scissors'];
 
-	let randomNum = Math.floor(Math.random() * 4);
+	var randomNum = Math.floor(Math.random() * 3);
 
 	return options[randomNum];
 };
@@ -28,7 +28,7 @@ function round(user_str) {
 
 	userPlay.innerHTML = "You chose "+user_str+".";
 
-	let comp_str = computer_play();
+	var comp_str = computer_play();
 
 	compPlay.innerHTML = "The computer chose "+comp_str+".";
 
@@ -70,9 +70,11 @@ function round(user_str) {
 	}
 }
 
-let computer_score = 0;
-let user_score = 0;
-let result = [];
+var computer_score = 0;
+
+var user_score = 0;
+
+var result = [];
 
 buttons.forEach((button) => {
 	button.addEventListener("click", function() {
@@ -90,8 +92,11 @@ buttons.forEach((button) => {
 		else if (result.indexOf("Win") != -1) {
 			user_score += 1;
 		};
+
 		compScore.innerHTML = computer_score;
+
 		userScore.innerHTML = user_score;
+		
 		if (user_score >= 5) {
 			roundResult.innerHTML = "Congrats chale! You won the game!";
 			computer_score = 0;
