@@ -13,7 +13,7 @@ div.col-sm-1 {
 }
 
 div.paper input {
-    background:url('images/paperemoji.png') no-repeat;
+    background:url('../images/paperemoji.png') no-repeat;
     cursor:pointer;
     width: 200px;
     height: 200px;
@@ -22,7 +22,7 @@ div.paper input {
 }
 
 div.rock input {
-    background:url('images/rockemoji.png') no-repeat;
+    background:url('../images/rockemoji.png') no-repeat;
     cursor:pointer;
     width: 200px;
     height: 200px;
@@ -31,7 +31,7 @@ div.rock input {
 }
 
 div.scissors input {
-    background:url('images/scissorsemoji.png') no-repeat;
+    background:url('../images/scissorsemoji.png') no-repeat;
     cursor:pointer;
     width: 200px;
     height: 200px;
