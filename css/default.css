@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+body {
+  color: black;
+  padding-top: 55px;
+  padding-left: 55px;
+  padding-right: 55px;
+  font-family: "Comfortaa";
+}
+
+div.col-sm-1 {
+	font-size: 25px;
+}
+
+div.paper input {
+    background:url('images/paperemoji.png') no-repeat;
+    cursor:pointer;
+    width: 200px;
+    height: 200px;
+    border: none;
+    background-size: contain;
+}
+
+div.rock input {
+    background:url('images/rockemoji.png') no-repeat;
+    cursor:pointer;
+    width: 200px;
+    height: 200px;
+    border: none;
+    background-size: contain;
+}
+
+div.scissors input {
+    background:url('images/scissorsemoji.png') no-repeat;
+    cursor:pointer;
+    width: 200px;
+    height: 200px;
+    border: none;
+    background-size: contain;
+}
+
+h2 {
+	padding-bottom: 35px;
+}
+
+#user-play {
+	font-size: 40px;
+}
+
+#computer-play {
+	font-size: 40px;
+	padding-bottom: 55px;
+}
+
+#game {
+	font-size: 60px;
+	padding-top: 40px;
+	padding-bottom: 55px;
+}
